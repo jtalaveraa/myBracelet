@@ -1,5 +1,7 @@
 import mqtt from 'mqtt';
+import Chart from 'chart.js/auto';
 
+window.Chart = Chart;
 window.connectToAdafruit = (username, activeKey, feedName, onMessage) => {
     const client = mqtt.connect(`wss://io.adafruit.com:443/mqtt`, {
         username: username,
